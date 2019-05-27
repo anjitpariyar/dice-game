@@ -1,6 +1,5 @@
 var score , activePalyer,roundScore,dice,diceDom,count,six,winingnumber,trun=1;
 
-start();
 //creacting change active function
 
 
@@ -154,7 +153,7 @@ score = [0,0];
 activePalyer=0;
 roundScore=0;
 trun=0;
-stopConfetti();
+
 document.querySelector('.diceimg').style.display='none';
 
 document.getElementById('score0').textContent='0';
