@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Dice game</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="got.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple">
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   
+   
+
+</head>
+
+<body >
+<div class="dice">	
+
+    <section class="container ">
+		      <a class="icon" href="#" id="newgame"><p class="text-dark" href="#"><span class="pr-2 part"><i class="fas fa-plus-circle"></i></span>new game</p></a>
+	      </section>
+	<section class="container">
+		<div class="row">
+			<div class="col-sm-4  haha active">
+				<div>
+					<p class=" player" id="name0">Player 1</p>
+
+				</div>
+				<div>
+					<p class="number " id="score0">
+						0
+					</p>
+				</div>
+				<div class="box leftbox">
+					<p class="scoretext">Current</p>
+					<p class="score" id="current0">0</p>
+				</div>
+				<div class="m-5">
+					
+				</div>
+
+
+			</div>
+			<div class="col-sm-4">
+				<div class="diceblock">
+					 <img src="dice-6.jpg" class="diceimg ">
+				</div>
+				
+				<div class="ml-5 mb-5 mb-sm-5 mb-md-2">
+				
+					          <a href="#" class="icon" id="roll"><p><span class="pr-2  part"><i class="fas fa-sync-alt"></i></span> roll a dice</p></a>
+					          <a href="#" class="icon" id="hold"><p class="text-muted"><span class="pr-2  part"><i class="fas fa-download"></i></span>    hold</p></a>
+				       </div>
+					 
+
+				
+			</div>
+			<div class="col-sm-4 lol">
+				<div>
+					<p class="player" id="name1">Player 2</p>
+
+				</div>
+				<div>
+					<p class="number " id="score1">
+						0
+					</p>
+				</div>
+				<div class="box leftbox">
+					<p class="scoretext">Current</p>
+					<p class="score" id="current1">0</p>
+				</div>
+				<div class="m-5">
+					
+				</div>
+
+				
+			</div>
+
+			
+		</div>
+		
+
+	</section>
+	<section>
+		<div class="container">
+			<div class="row ">
+			  
+				<div class="col-sm-4">
+					<button type="button" class="btn btn-sm  btn-outline-success dropdown-toggle rules" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Enter Player Name</button>
+            
+		             <div class="dropdown-menu p-4 dropdown-menu-right" >
+                          <form class="form-group row">
+                          	<label for="playerone" class="col-form-label col-3">Player 1</label>
+                          	<div class="col-9 mb-3 ">
+                          	<input type="text" ng-model="player" id="playerone" placeholder="name" class="form-control form-control-no-border">
+                          </div>
+
+
+                          	<label  for="playertwo" class="col-form-label col-3">Player 2</label>
+                          	<div class="col-9 mb-3">
+                          	<input type="text" ng-model="player2" id="playertwo" placeholder="name" class="form-control form-control-no-border">
+                          </div>
+                          <div class="d-flex save">
+                          	<button class="btn btn-sm btn-info " role="submit" >Save</button>
+                          </div>	
+                          </form>
+                    </div>
+
+					
+				</div>
+				<div class="col-sm-4">
+					<form class="form-group ">
+			            <input type="text" name="" value="" placeholder="Winning Number" class="form-control form-control-no-border win">
+		            </form>
+				</div>
+				<div class="col-sm-4">
+					 <button type="button" class="btn btn-sm btn-outline-success dropdown-toggle rules rule" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rules Of Game</button>
+            
+		             <div class="dropdown-menu p-4 dropdown-menu-right">
+		             	<ul>
+                          <li>The first player to accumulate Winning Number or more points wins the game.(you can set your own winning number.By default it will be 100) </li>
+                          <li>If the player rolls a 1 ,his turn is over, he loses all points he accumulated that turn</li>
+                          <li>To save from lossing current point, player has to hold number</li>
+                          <li>Getting two 6 points in a row is unfortunate, it will lose player entire score</li>
+                          <li>you can't change your name until you start new game</li>
+                      </ul>
+
+                     </div>
+
+					
+				</div>
+			  
+				
+			</div>
+			
+		</div>
+		
+		
+              	</section>
+              	
+       
+
+
+
+
+</div>
+
+
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="project2.js"></script>   
+</body>
+</html>
